@@ -11,14 +11,5 @@
   <% end %>
 
   <div id="fb-root"></div>
-
-  <div
-    class="fb-share-button"
-    data-send="<%= Spree::Social::Config.preferred_facebook_send_button %>"
-    data-width="450"
-    data-show-faces="<%= Spree::Social::Config.preferred_facebook_show_faces %>"
-    data-layout="<%= Spree::Social::Config.preferred_facebook_layout %>"
-    data-colorscheme="<%= Spree::Social::Config.preferred_facebook_color_scheme %>"
-    data-action="<%= Spree::Social::Config.preferred_facebook_verb_to_display %>">
-  </div>
+    <a class="js-facebook-product-detail-lnk" href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&amp;sdk=joey&amp;u=https%3A%2F%2Fblack-line.ae%2Fproducts%2F<%=@product.slug%>&amp;display=popup&amp;ref=plugin&amp;src=share_button" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')"><%= image_tag "fb-ico.svg", alt: "" %></a>
 <% end %>
